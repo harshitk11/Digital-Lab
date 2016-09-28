@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/xilinx/lab102/ram2.xst" -ofn "D:/xilinx/lab102/ram2.syr" 

@@ -1,0 +1,3 @@
+verilog work "FA.v"
+verilog work "RCA.v"
+verilog work "mac.v"

@@ -1,0 +1,8 @@
+[Inputs]
+cnt
+[Outputs]
+=out[19:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mac
+

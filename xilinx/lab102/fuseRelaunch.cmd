@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/xilinx/lab102/ram2_isim_beh.exe" -prj "D:/xilinx/lab102/ram2_beh.prj" "work.ram2" "work.glbl" 

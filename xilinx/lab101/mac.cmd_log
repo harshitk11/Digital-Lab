@@ -1,0 +1,55 @@
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 mac.ngc mac.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o mac_map.ncd mac.ngd mac.pcf 
+par -w -intstyle ise -ol high -mt off mac_map.ncd mac.ncd mac.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mac.twx mac.ncd -o mac.twr mac.pcf 
+vhdtdtfi -lib work D:/xilinx/lab101/mac.v -lang verilog -prj lab101 -o mac.spl -module mac -template C:/Xilinx/14.4/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 mac.spl D:/xilinx/lab101/mac.sym 
+vhdtdtfi -lang verilog -prj lab101 -o D:/xilinx/lab101/mac.tfi -lib work D:/xilinx/lab101//mac.v -module mac -template C:/Xilinx/14.4/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 mac.ngc mac.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o mac_map.ncd mac.ngd mac.pcf 
+par -w -intstyle ise -ol high -mt off mac_map.ncd mac.ncd mac.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mac.twx mac.ncd -o mac.twr mac.pcf 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr" 

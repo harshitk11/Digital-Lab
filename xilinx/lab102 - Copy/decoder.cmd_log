@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 

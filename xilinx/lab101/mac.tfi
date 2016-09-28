@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+mac instance_name (
+    .cnt(cnt), 
+    .out(out)
+    );
+
+

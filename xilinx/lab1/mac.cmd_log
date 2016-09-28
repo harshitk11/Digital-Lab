@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/xilinx/lab1/mac.xst" -ofn "D:/xilinx/lab1/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab1/mac.xst" -ofn "D:/xilinx/lab1/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab1/mac.xst" -ofn "D:/xilinx/lab1/mac.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab1/mac.xst" -ofn "D:/xilinx/lab1/mac.syr" 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/xilinx/mac/mac_tb_isim_beh.exe" -prj "D:/xilinx/mac/mac_tb_beh.prj" "work.mac_tb" "work.glbl" 

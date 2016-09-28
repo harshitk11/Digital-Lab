@@ -1,0 +1,480 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ram2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ram2.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ram2"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : ram2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\xilinx\lab102\Dflipflop.v" into library work
+Parsing module <Dflipflop>.
+Analyzing Verilog file "D:\xilinx\lab102\mem8bit.v" into library work
+Parsing module <mem8bit>.
+Analyzing Verilog file "D:\xilinx\lab102\decoder.v" into library work
+Parsing module <decoder>.
+Analyzing Verilog file "D:\xilinx\lab102\buf.v" into library work
+Parsing module <buff>.
+Analyzing Verilog file "D:\xilinx\lab102\ram2.v" into library work
+Parsing module <ram2>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ram2>.
+Reading initialization file \"mem2.txt\".
+WARNING:HDLCompiler:872 - "D:\xilinx\lab102\ram2.v" Line 25: Using initial value of din since it is never assigned
+
+Elaborating module <decoder>.
+
+Elaborating module <mem8bit>.
+
+Elaborating module <Dflipflop>.
+
+Elaborating module <buff>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ram2>.
+    Related source file is "D:\xilinx\lab102\ram2.v".
+    Summary:
+	no macro.
+Unit <ram2> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "D:\xilinx\lab102\decoder.v".
+    Found 1-bit tristate buffer for signal <sel<15>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<14>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<13>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<12>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<11>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<10>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<9>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<8>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<7>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<6>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<5>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<4>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<3>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<2>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<1>> created at line 26
+    Found 1-bit tristate buffer for signal <sel<0>> created at line 26
+    Summary:
+	inferred  16 Tristate(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <mem8bit>.
+    Related source file is "D:\xilinx\lab102\mem8bit.v".
+    Summary:
+	no macro.
+Unit <mem8bit> synthesized.
+
+Synthesizing Unit <Dflipflop>.
+    Related source file is "D:\xilinx\lab102\Dflipflop.v".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Dflipflop> synthesized.
+
+Synthesizing Unit <buff>.
+    Related source file is "D:\xilinx\lab102\buf.v".
+    Found 1-bit tristate buffer for signal <out<7>> created at line 29
+    Found 1-bit tristate buffer for signal <out<6>> created at line 29
+    Found 1-bit tristate buffer for signal <out<5>> created at line 29
+    Found 1-bit tristate buffer for signal <out<4>> created at line 29
+    Found 1-bit tristate buffer for signal <out<3>> created at line 29
+    Found 1-bit tristate buffer for signal <out<2>> created at line 29
+    Found 1-bit tristate buffer for signal <out<1>> created at line 29
+    Found 1-bit tristate buffer for signal <out<0>> created at line 29
+    Summary:
+	inferred   8 Tristate(s).
+Unit <buff> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 128
+ 1-bit register                                        : 128
+# Tristates                                            : 144
+ 1-bit tristate buffer                                 : 144
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Q> (without init value) has a constant value of 0 in block <d4>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <ram2>: instances <m2>, <m10> of unit <mem8bit> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <ram2>: instances <m6>, <m14> of unit <mem8bit> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <ram2>: instances <m8>, <m13> of unit <mem8bit> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <ram2>: instances <m9>, <m15> of unit <mem8bit> are equivalent, second instance is removed
+INFO:Xst:2261 - The FF/Latch <m0/d6/Q> in Unit <ram2> is equivalent to the following 50 FFs/Latches, which will be removed : <m0/d5/Q> <m0/d3/Q> <m0/d0/Q> <m1/d7/Q> <m1/d5/Q> <m1/d4/Q> <m1/d3/Q> <m1/d2/Q> <m2/d7/Q> <m2/d5/Q> <m2/d4/Q> <m2/d0/Q> <m3/d6/Q> <m3/d3/Q> <m3/d1/Q> <m3/d0/Q> <m4/d5/Q> <m4/d4/Q> <m4/d1/Q> <m4/d0/Q> <m5/d7/Q> <m5/d6/Q> <m5/d2/Q> <m6/d7/Q> <m6/d4/Q> <m6/d2/Q> <m6/d0/Q> <m7/d7/Q> <m7/d3/Q> <m7/d2/Q> <m7/d1/Q> <m8/d7/Q> <m8/d6/Q> <m8/d3/Q> <m8/d2/Q> <m8/d0/Q> <m9/d7/Q> <m9/d5/Q> <m9/d3/Q> <m9/d2/Q> <m9/d0/Q> <m11/d7/Q> <m11/d6/Q> <m11/d5/Q> <m11/d3/Q> <m11/d1/Q> <m12/d5/Q> <m12/d4/Q> <m12/d3/Q> <m12/d1/Q> 
+INFO:Xst:2261 - The FF/Latch <m0/d7/Q> in Unit <ram2> is equivalent to the following 44 FFs/Latches, which will be removed : <m0/d4/Q> <m0/d2/Q> <m0/d1/Q> <m1/d6/Q> <m1/d1/Q> <m1/d0/Q> <m2/d6/Q> <m2/d3/Q> <m2/d2/Q> <m2/d1/Q> <m3/d7/Q> <m3/d5/Q> <m3/d4/Q> <m3/d2/Q> <m4/d7/Q> <m4/d6/Q> <m4/d3/Q> <m4/d2/Q> <m5/d5/Q> <m5/d4/Q> <m5/d3/Q> <m5/d1/Q> <m5/d0/Q> <m6/d6/Q> <m6/d5/Q> <m6/d3/Q> <m6/d1/Q> <m7/d6/Q> <m7/d5/Q> <m7/d4/Q> <m7/d0/Q> <m8/d5/Q> <m8/d4/Q> <m8/d1/Q> <m9/d6/Q> <m9/d4/Q> <m9/d1/Q> <m11/d4/Q> <m11/d2/Q> <m11/d0/Q> <m12/d7/Q> <m12/d6/Q> <m12/d2/Q> <m12/d0/Q> 
+WARNING:Xst:1710 - FF/Latch <m0/d7/Q> (without init value) has a constant value of 0 in block <ram2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2040 - Unit ram2: 8 multi-source signals are replaced by logic (pull-up yes): out<0>_MLTSRCEDGE, out<1>_MLTSRCEDGE, out<2>_MLTSRCEDGE, out<3>_MLTSRCEDGE, out<4>_MLTSRCEDGE, out<5>_MLTSRCEDGE, out<6>_MLTSRCEDGE, out<7>_MLTSRCEDGE.
+
+Optimizing unit <ram2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ram2, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ram2.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 9
+#      LUT4                        : 1
+#      LUT5                        : 7
+#      VCC                         : 1
+# FlipFlops/Latches                : 1
+#      FDRE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 6
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               1  out of  126800     0%  
+ Number of Slice LUTs:                    8  out of  63400     0%  
+    Number used as Logic:                 8  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      9
+   Number with an unused Flip Flop:       8  out of      9    88%  
+   Number with an unused LUT:             1  out of      9    11%  
+   Number of fully used LUT-FF pairs:     0  out of      9     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    210     7%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 0.629ns
+   Maximum output required time after clock: 1.453ns
+   Maximum combinational path delay: 0.966ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.629ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       m0/d6/Q (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to m0/d6/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.279  rst_IBUF (rst_IBUF)
+     FDRE:R                    0.349          m0/d6/Q
+    ----------------------------------------
+    Total                      0.629ns (0.350ns logic, 0.279ns route)
+                                       (55.6% logic, 44.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.453ns (Levels of Logic = 2)
+  Source:            m0/d6/Q (FF)
+  Destination:       out<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: m0/d6/Q to out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.361   0.715  m0/d6/Q (m0/d6/Q)
+     LUT5:I0->O            1   0.097   0.279  out<0>_MLTSRCEDGELogicTrst1 (out_0_OBUF)
+     OBUF:I->O                 0.000          out_0_OBUF (out<0>)
+    ----------------------------------------
+    Total                      1.453ns (0.458ns logic, 0.995ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 31 / 8
+-------------------------------------------------------------------------
+Delay:               0.966ns (Levels of Logic = 3)
+  Source:            addr<1> (PAD)
+  Destination:       out<7> (PAD)
+
+  Data Path: addr<1> to out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.001   0.589  addr_1_IBUF (addr_1_IBUF)
+     LUT5:I1->O            1   0.097   0.279  out<7>_MLTSRCEDGELogicTrst1 (out_7_OBUF)
+     OBUF:I->O                 0.000          out_7_OBUF (out<7>)
+    ----------------------------------------
+    Total                      0.966ns (0.098ns logic, 0.868ns route)
+                                       (10.1% logic, 89.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.70 secs
+ 
+--> 
+
+Total memory usage is 477620 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   66 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

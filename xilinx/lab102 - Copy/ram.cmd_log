@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/xilinx/lab102/ram.xst" -ofn "D:/xilinx/lab102/ram.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/ram.xst" -ofn "D:/xilinx/lab102/ram.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/ram.xst" -ofn "D:/xilinx/lab102/ram.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/ram.xst" -ofn "D:/xilinx/lab102/ram.syr" 
+xst -intstyle ise -ifn "D:/xilinx/lab102/ram.xst" -ofn "D:/xilinx/lab102/ram.syr" 
