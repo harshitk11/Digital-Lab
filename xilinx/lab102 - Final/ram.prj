@@ -1,0 +1,5 @@
+verilog work "Dflipflop.v"
+verilog work "mem8bit.v"
+verilog work "decoder.v"
+verilog work "buf.v"
+verilog work "ram.v"

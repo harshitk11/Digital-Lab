@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Copy/ram_tb_isim_beh.exe" -prj "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Copy/ram_tb_beh.prj" "work.ram_tb" "work.glbl" 
