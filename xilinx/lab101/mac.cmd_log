@@ -56,3 +56,8 @@ xst -intstyle ise -ifn "D:/xilinx/lab101/mac.xst" -ofn "D:/xilinx/lab101/mac.syr
 xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 
 xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 
 xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.syr" 

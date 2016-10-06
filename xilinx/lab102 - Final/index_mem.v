@@ -21,14 +21,15 @@
 module index_mem(i1,i2,r1,r2,cnt1,cnt2,wr_en,clk,reset);
 input wr_en,clk,reset;
 input i1,i2;
-input [3:0] cnt1,cnt2;
+input cnt1,cnt2;
 wire [7:0] i1,i2;
-wire [2:0] comp_logic;
+wire [1:0] comp_logic;
 output [7:0] r1,r2;
+wire [3:0] cnt,cnt1,cnt2;
 
 ram i_mem1(i1,r1,cnt1,wr_en,clk,reset);
 ram i_mem2(i2,r2,cnt2,wr_en,clk,reset);
-comp(r1,r2,comp_logic);
-logic1(comp_logic,cnt1,cnt2);
+comp c1(r1,r2,comp_logic);
+logic1 l1(comp_logic,cnt1,cnt2,cnt);
 
 endmodule

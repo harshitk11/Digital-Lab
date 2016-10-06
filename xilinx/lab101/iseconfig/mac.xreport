@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-09-30T16:35:51</DateModified>
-  <ModuleName>RCA</ModuleName>
+  <DateModified>2016-10-06T22:22:32</DateModified>
+  <ModuleName>mac</ModuleName>
   <SummaryTimeStamp>2016-09-30T16:34:56</SummaryTimeStamp>
   <SavedFilePath>C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/iseconfig/mac.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101\</ImplementationReportsDirectory>

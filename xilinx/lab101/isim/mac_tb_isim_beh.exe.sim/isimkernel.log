@@ -2,27 +2,27 @@ Command line:
    mac_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  10080
+     -socket  9378
 
-Fri Sep 30 16:52:34 2016
+Thu Oct 06 19:01:48 2016
 
 
- Elaboration Time: 0.046875 sec
+ Elaboration Time: 0.0625 sec
 
- Current Memory Usage: 839.066 Meg
+ Current Memory Usage: 839.16 Meg
 
- Total Signals          : 125
- Total Nets             : 151
- Total Signal Drivers   : 56
- Total Blocks           : 24
- Total Primitive Blocks : 21
- Total Processes        : 59
+ Total Signals          : 20
+ Total Nets             : 106
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 14
  Total Traceable Variables  : 28
- Total Scalar Nets and Variables : 604
+ Total Scalar Nets and Variables : 559
 
- Total Simulation Time: 0.0625 sec
+ Total Simulation Time: 0.203125 sec
 
- Current Memory Usage: 839.066 Meg
+ Current Memory Usage: 1153.73 Meg
 
-Fri Sep 30 16:52:42 2016
+Thu Oct 06 19:02:45 2016
 

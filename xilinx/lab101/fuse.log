@@ -3,21 +3,17 @@ ISim P.49d (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/FA.v" into library work
-Analyzing Verilog file "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/RCA.v" into library work
 Analyzing Verilog file "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac.v" into library work
 Analyzing Verilog file "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module FA
-Compiling module RCA
 Compiling module mac
 Compiling module mac_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 Verilog Units
+Compiled 3 Verilog Units
 Built simulation executable C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/mac_tb_isim_beh.exe
-Fuse Memory Usage: 28260 KB
-Fuse CPU Usage: 421 ms
+Fuse Memory Usage: 27452 KB
+Fuse CPU Usage: 437 ms

@@ -19,8 +19,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module comp(r1,r2,out);
-input en;
-input [3:0] r1,r2;
+
+input [7:0] r1,r2;
 output out;
 reg [1:0] out;
 always @ (r1 or r2)

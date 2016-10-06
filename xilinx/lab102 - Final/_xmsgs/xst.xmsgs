@@ -5,7 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="2040" delta="old" >Unit <arg fmt="%s" index="1">ram</arg>: <arg fmt="%d" index="2">8</arg> multi-source signals are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+<msg type="error" file="HDLCompiler" num="661" delta="new" >"C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\index_mem.v" Line 24: Non-net port <arg fmt="%s" index="1">cnt1</arg> cannot be of mode <arg fmt="%s" index="2">input</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\index_mem.v" Line 21: Module &lt;<arg fmt="%s" index="1">index_mem</arg>&gt; ignored due to previous errors.
+</msg>
 
 </messages>
 

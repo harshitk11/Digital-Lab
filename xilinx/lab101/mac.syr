@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: mac.prj
 
@@ -105,10 +105,6 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\FA.v" into library work
-Parsing module <FA>.
-Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\RCA.v" into library work
-Parsing module <RCA>.
 Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\mac.v" into library work
 Parsing module <mac>.
 
@@ -117,11 +113,7 @@ Parsing module <mac>.
 =========================================================================
 
 Elaborating module <mac>.
-
-Elaborating module <RCA>.
-
-Elaborating module <FA>.
-WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\mac.v" Line 51: Signal <s> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\mac.v" Line 53: Signal <s> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -129,8 +121,8 @@ WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab1
 
 Synthesizing Unit <mac>.
     Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\mac.v".
-WARNING:Xst:647 - Input <cnt> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 8x8-bit multiplier for signal <p> created at line 38.
+    Found 20-bit adder for signal <s> created at line 40.
+    Found 8x8-bit multiplier for signal <p> created at line 39.
 WARNING:Xst:737 - Found 1-bit latch for signal <r1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <r1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <r1<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -149,23 +141,10 @@ WARNING:Xst:737 - Found 1-bit latch for signal <r2<0>>. Latches may be generated
 WARNING:Xst:737 - Found 1-bit latch for signal <r1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
 	inferred  16 Latch(s).
 	inferred   1 Multiplexer(s).
 Unit <mac> synthesized.
-
-Synthesizing Unit <RCA>.
-    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\RCA.v".
-INFO:Xst:3210 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\RCA.v" line 46: Output port <cout> of the instance <f20> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <RCA> synthesized.
-
-Synthesizing Unit <FA>.
-    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\FA.v".
-    Found 1-bit adder for signal <cout> created at line 27.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-Unit <FA> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -173,14 +152,12 @@ HDL Synthesis Report
 Macro Statistics
 # Multipliers                                          : 1
  8x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 20
- 1-bit adder                                           : 20
+# Adders/Subtractors                                   : 1
+ 20-bit adder                                          : 1
 # Latches                                              : 16
  1-bit latch                                           : 16
 # Multiplexers                                         : 1
  20-bit 2-to-1 multiplexer                             : 1
-# Xors                                                 : 40
- 1-bit xor2                                            : 40
 
 =========================================================================
 
@@ -189,18 +166,18 @@ Macro Statistics
 =========================================================================
 
 
+Synthesizing (advanced) Unit <mac>.
+	Multiplier <Mmult_p> in block <mac> and adder/subtractor <Madd_s> in block <mac> are combined into a MAC<Maddsub_p>.
+Unit <mac> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Multipliers                                          : 1
- 8x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 20
- 1-bit adder                                           : 20
+# MACs                                                 : 1
+ 8x8-to-20-bit Dynamic Mult/MultAdd                    : 1
 # Multiplexers                                         : 1
  20-bit 2-to-1 multiplexer                             : 1
-# Xors                                                 : 40
- 1-bit xor2                                            : 40
 
 =========================================================================
 
@@ -209,8 +186,6 @@ Macro Statistics
 =========================================================================
 
 Optimizing unit <mac> ...
-
-Optimizing unit <RCA> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -243,13 +218,10 @@ Top Level Output File Name         : mac.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 53
+# BELS                             : 23
 #      GND                         : 1
-#      LUT2                        : 16
-#      LUT3                        : 17
-#      LUT4                        : 15
-#      LUT5                        : 2
-#      LUT6                        : 1
+#      INV                         : 1
+#      LUT2                        : 20
 #      VCC                         : 1
 # FlipFlops/Latches                : 16
 #      LD_1                        : 16
@@ -268,18 +240,18 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice LUTs:                   51  out of  63400     0%  
-    Number used as Logic:                51  out of  63400     0%  
+ Number of Slice LUTs:                   21  out of  63400     0%  
+    Number used as Logic:                21  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     51
-   Number with an unused Flip Flop:      51  out of     51   100%  
-   Number with an unused LUT:             0  out of     51     0%  
-   Number of fully used LUT-FF pairs:     0  out of     51     0%  
+ Number of LUT Flip Flop pairs used:     21
+   Number with an unused Flip Flop:      21  out of     21   100%  
+   Number with an unused LUT:             0  out of     21     0%  
+   Number of fully used LUT-FF pairs:     0  out of     21     0%  
    Number of unique control sets:         1
 
 IO Utilization: 
- Number of IOs:                          41
+ Number of IOs:                          37
  Number of bonded IOBs:                  37  out of    210    17%  
     IOB Flip Flops/Latches:              16
 
@@ -321,8 +293,8 @@ Speed Grade: -3
 
    Minimum period: No path found
    Minimum input arrival time before clock: 0.280ns
-   Maximum output required time after clock: 23.235ns
-   Maximum combinational path delay: 19.868ns
+   Maximum output required time after clock: 4.253ns
+   Maximum combinational path delay: 3.139ns
 
 Timing Details:
 ---------------
@@ -349,9 +321,9 @@ Offset:              0.280ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'reset'
-  Total number of paths / destination ports: 41941776 / 20
+  Total number of paths / destination ports: 320 / 20
 -------------------------------------------------------------------------
-Offset:              23.235ns (Levels of Logic = 38)
+Offset:              4.253ns (Levels of Logic = 3)
   Source:            r2_7 (LATCH)
   Destination:       out<19> (PAD)
   Source Clock:      reset rising
@@ -361,53 +333,18 @@ Offset:              23.235ns (Levels of Logic = 38)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD_1:G->Q             1   0.475   0.279  r2_7 (r2_7)
-     DSP48E1:A7->P0        3   2.823   0.389  Mmult_p (p<0>)
-     LUT3:I1->O            4   0.097   0.309  Mmux_out11 (out_0_OBUF)
-     LUT2:I1->O            1   0.097   0.379  a1/f1/n00061 (a1/f1/n0006)
-     LUT3:I1->O            3   0.097   0.566  Mmux_out121 (out_1_OBUF)
-     LUT5:I1->O            2   0.097   0.383  a1/f2/Madd_cout_lut<0>1 (a1/cout<1>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out131 (out_2_OBUF)
-     LUT4:I1->O            2   0.097   0.383  a1/f3/Madd_cout_lut<0>1 (a1/cout<2>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out141 (out_3_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f4/Madd_cout_lut<0>1 (a1/cout<3>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out151 (out_4_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f5/Madd_cout_lut<0>1 (a1/cout<4>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out161 (out_5_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f6/Madd_cout_lut<0>1 (a1/cout<5>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out171 (out_6_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f7/Madd_cout_lut<0>1 (a1/cout<6>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out181 (out_7_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f8/Madd_cout_lut<0>1 (a1/cout<7>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out191 (out_8_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f9/Madd_cout_lut<0>1 (a1/cout<8>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out201 (out_9_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f10/Madd_cout_lut<0>1 (a1/cout<9>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out21 (out_10_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f11/Madd_cout_lut<0>1 (a1/cout<10>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out31 (out_11_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f12/Madd_cout_lut<0>1 (a1/cout<11>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out41 (out_12_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f13/Madd_cout_lut<0>1 (a1/cout<12>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out51 (out_13_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f14/Madd_cout_lut<0>1 (a1/cout<13>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out61 (out_14_OBUF)
-     LUT4:I1->O            2   0.097   0.383  a1/f15/Madd_cout_lut<0>1 (a1/cout<14>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out71 (out_15_OBUF)
-     LUT4:I1->O            4   0.097   0.393  a1/f16/Madd_cout_lut<0>1 (a1/cout<15>)
-     LUT3:I1->O            5   0.097   0.398  Mmux_out81 (out_16_OBUF)
-     LUT4:I2->O            4   0.097   0.393  Mmux_out91 (out_17_OBUF)
-     LUT5:I3->O            3   0.097   0.389  Mmux_out101 (out_18_OBUF)
-     LUT6:I4->O            2   0.097   0.283  Mmux_out111 (out_19_OBUF)
+     DSP48E1:A7->P19       2   2.823   0.299  Maddsub_p (s<19>)
+     LUT2:I1->O            1   0.097   0.279  Mmux_out111 (out_19_OBUF)
      OBUF:I->O                 0.000          out_19_OBUF (out<19>)
     ----------------------------------------
-    Total                     23.235ns (6.790ns logic, 16.445ns route)
-                                       (29.2% logic, 70.8% route)
+    Total                      4.253ns (3.395ns logic, 0.858ns route)
+                                       (79.8% logic, 20.2% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 1048575 / 20
+  Total number of paths / destination ports: 60 / 20
 -------------------------------------------------------------------------
-Delay:               19.868ns (Levels of Logic = 38)
+Delay:               3.139ns (Levels of Logic = 5)
   Source:            reset (PAD)
   Destination:       out<19> (PAD)
 
@@ -415,47 +352,14 @@ Delay:               19.868ns (Levels of Logic = 38)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            20   0.001   0.599  reset_IBUF (reset_IBUF)
-     LUT3:I0->O            4   0.097   0.309  Mmux_out11 (out_0_OBUF)
-     LUT2:I1->O            1   0.097   0.379  a1/f1/n00061 (a1/f1/n0006)
-     LUT3:I1->O            3   0.097   0.566  Mmux_out121 (out_1_OBUF)
-     LUT5:I1->O            2   0.097   0.383  a1/f2/Madd_cout_lut<0>1 (a1/cout<1>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out131 (out_2_OBUF)
-     LUT4:I1->O            2   0.097   0.383  a1/f3/Madd_cout_lut<0>1 (a1/cout<2>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out141 (out_3_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f4/Madd_cout_lut<0>1 (a1/cout<3>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out151 (out_4_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f5/Madd_cout_lut<0>1 (a1/cout<4>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out161 (out_5_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f6/Madd_cout_lut<0>1 (a1/cout<5>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out171 (out_6_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f7/Madd_cout_lut<0>1 (a1/cout<6>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out181 (out_7_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f8/Madd_cout_lut<0>1 (a1/cout<7>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out191 (out_8_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f9/Madd_cout_lut<0>1 (a1/cout<8>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out201 (out_9_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f10/Madd_cout_lut<0>1 (a1/cout<9>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out21 (out_10_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f11/Madd_cout_lut<0>1 (a1/cout<10>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out31 (out_11_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f12/Madd_cout_lut<0>1 (a1/cout<11>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out41 (out_12_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f13/Madd_cout_lut<0>1 (a1/cout<12>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out51 (out_13_OBUF)
-     LUT4:I1->O            2   0.097   0.384  a1/f14/Madd_cout_lut<0>1 (a1/cout<13>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out61 (out_14_OBUF)
-     LUT4:I1->O            2   0.097   0.383  a1/f15/Madd_cout_lut<0>1 (a1/cout<14>)
-     LUT3:I1->O            3   0.097   0.521  Mmux_out71 (out_15_OBUF)
-     LUT4:I1->O            4   0.097   0.393  a1/f16/Madd_cout_lut<0>1 (a1/cout<15>)
-     LUT3:I1->O            5   0.097   0.398  Mmux_out81 (out_16_OBUF)
-     LUT4:I2->O            4   0.097   0.393  Mmux_out91 (out_17_OBUF)
-     LUT5:I3->O            3   0.097   0.389  Mmux_out101 (out_18_OBUF)
-     LUT6:I4->O            2   0.097   0.283  Mmux_out111 (out_19_OBUF)
+     IBUF:I->O            21   0.001   0.370  reset_IBUF (reset_IBUF)
+     INV:I->O              2   0.113   0.283  reset_inv1_INV_0 (reset_inv)
+     DSP48E1:OPMODE4->P19    2   1.695   0.299  Maddsub_p (s<19>)
+     LUT2:I1->O            1   0.097   0.279  Mmux_out111 (out_19_OBUF)
      OBUF:I->O                 0.000          out_19_OBUF (out<19>)
     ----------------------------------------
-    Total                     19.868ns (3.493ns logic, 16.375ns route)
-                                       (17.6% logic, 82.4% route)
+    Total                      3.139ns (1.906ns logic, 1.233ns route)
+                                       (60.7% logic, 39.3% route)
 
 =========================================================================
 
@@ -466,13 +370,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.68 secs
+Total CPU time to Xst completion: 8.36 secs
  
 --> 
 
-Total memory usage is 474036 kilobytes
+Total memory usage is 485684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   18 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 
