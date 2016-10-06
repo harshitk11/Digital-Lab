@@ -18,16 +18,14 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module main();
+module main(reset,clk);
+input reset,clk;
 
 reg [15:0] i1,i2;
-reg [15:0] i;
-reg [7:0] m1,m2 [0:15];
-initial $readmemb("mem1",m1);
-initial $readmemb("mem2",m2);
-initial $readmemb("index1",i1);
-initial $readmemb("index2",i2);
-assign i = i1 & i2;
+
+
+
+reg r1,r2;
 
 
 endmodule

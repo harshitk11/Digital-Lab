@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: mac.prj
 
@@ -105,11 +105,11 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\xilinx\lab101\FA.v" into library work
+Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\FA.v" into library work
 Parsing module <FA>.
-Analyzing Verilog file "D:\xilinx\lab101\RCA.v" into library work
+Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\RCA.v" into library work
 Parsing module <RCA>.
-Analyzing Verilog file "D:\xilinx\lab101\mac.v" into library work
+Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\mac.v" into library work
 Parsing module <mac>.
 
 =========================================================================
@@ -117,26 +117,19 @@ Parsing module <mac>.
 =========================================================================
 
 Elaborating module <mac>.
-Reading initialization file \"mem1.txt\".
-Reading initialization file \"mem2.txt\".
 
 Elaborating module <RCA>.
 
 Elaborating module <FA>.
-WARNING:HDLCompiler:91 - "D:\xilinx\lab101\mac.v" Line 49: Signal <m1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\xilinx\lab101\mac.v" Line 50: Signal <m2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\xilinx\lab101\mac.v" Line 51: Signal <s> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\mac.v" Line 51: Signal <s> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <mac>.
-    Related source file is "D:\xilinx\lab101\mac.v".
-WARNING:Xst:2999 - Signal 'm1', unconnected in block 'mac', is tied to its initial value.
-WARNING:Xst:2999 - Signal 'm2', unconnected in block 'mac', is tied to its initial value.
-    Found 16x8-bit single-port Read Only RAM <Mram_m1> for signal <m1>.
-    Found 16x8-bit single-port Read Only RAM <Mram_m2> for signal <m2>.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\mac.v".
+WARNING:Xst:647 - Input <cnt> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8x8-bit multiplier for signal <p> created at line 38.
 WARNING:Xst:737 - Found 1-bit latch for signal <r1<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <r1<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -155,21 +148,20 @@ WARNING:Xst:737 - Found 1-bit latch for signal <r2<1>>. Latches may be generated
 WARNING:Xst:737 - Found 1-bit latch for signal <r2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <r1<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   2 RAM(s).
 	inferred   1 Multiplier(s).
 	inferred  16 Latch(s).
 	inferred   1 Multiplexer(s).
 Unit <mac> synthesized.
 
 Synthesizing Unit <RCA>.
-    Related source file is "D:\xilinx\lab101\RCA.v".
-INFO:Xst:3210 - "D:\xilinx\lab101\RCA.v" line 46: Output port <cout> of the instance <f20> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\RCA.v".
+INFO:Xst:3210 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\RCA.v" line 46: Output port <cout> of the instance <f20> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <RCA> synthesized.
 
 Synthesizing Unit <FA>.
-    Related source file is "D:\xilinx\lab101\FA.v".
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab101\FA.v".
     Found 1-bit adder for signal <cout> created at line 27.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -179,8 +171,6 @@ Unit <FA> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 16x8-bit single-port Read Only RAM                    : 2
 # Multipliers                                          : 1
  8x8-bit multiplier                                    : 1
 # Adders/Subtractors                                   : 20
@@ -199,37 +189,10 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <mac>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_m1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <cnt>           |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_m2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <cnt>           |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <mac> synthesized (advanced).
-
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 16x8-bit single-port distributed Read Only RAM        : 2
 # Multipliers                                          : 1
  8x8-bit multiplier                                    : 1
 # Adders/Subtractors                                   : 20
@@ -280,11 +243,11 @@ Top Level Output File Name         : mac.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 68
+# BELS                             : 53
 #      GND                         : 1
-#      LUT2                        : 15
-#      LUT3                        : 21
-#      LUT4                        : 27
+#      LUT2                        : 16
+#      LUT3                        : 17
+#      LUT4                        : 15
 #      LUT5                        : 2
 #      LUT6                        : 1
 #      VCC                         : 1
@@ -292,8 +255,8 @@ Primitive and Black Box Usage:
 #      LD_1                        : 16
 # Clock Buffers                    : 1
 #      BUFG                        : 1
-# IO Buffers                       : 25
-#      IBUF                        : 5
+# IO Buffers                       : 37
+#      IBUF                        : 17
 #      OBUF                        : 20
 # DSPs                             : 1
 #      DSP48E1                     : 1
@@ -305,20 +268,20 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              16  out of  126800     0%  
- Number of Slice LUTs:                   66  out of  63400     0%  
-    Number used as Logic:                66  out of  63400     0%  
+ Number of Slice LUTs:                   51  out of  63400     0%  
+    Number used as Logic:                51  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     66
-   Number with an unused Flip Flop:      50  out of     66    75%  
-   Number with an unused LUT:             0  out of     66     0%  
-   Number of fully used LUT-FF pairs:    16  out of     66    24%  
+ Number of LUT Flip Flop pairs used:     51
+   Number with an unused Flip Flop:      51  out of     51   100%  
+   Number with an unused LUT:             0  out of     51     0%  
+   Number of fully used LUT-FF pairs:     0  out of     51     0%  
    Number of unique control sets:         1
 
 IO Utilization: 
- Number of IOs:                          25
- Number of bonded IOBs:                  25  out of    210    11%  
+ Number of IOs:                          41
+ Number of bonded IOBs:                  37  out of    210    17%  
+    IOB Flip Flops/Latches:              16
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -357,9 +320,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 0.723ns
-   Maximum output required time after clock: 22.959ns
-   Maximum combinational path delay: 19.476ns
+   Minimum input arrival time before clock: 0.280ns
+   Maximum output required time after clock: 23.235ns
+   Maximum combinational path delay: 19.868ns
 
 Timing Details:
 ---------------
@@ -367,29 +330,28 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'reset'
-  Total number of paths / destination ports: 59 / 16
+  Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
-Offset:              0.723ns (Levels of Logic = 2)
-  Source:            cnt<0> (PAD)
-  Destination:       r1_4 (LATCH)
+Offset:              0.280ns (Levels of Logic = 1)
+  Source:            m1<5> (PAD)
+  Destination:       r1_5 (LATCH)
   Destination Clock: reset rising
 
-  Data Path: cnt<0> to r1_4
+  Data Path: m1<5> to r1_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            16   0.001   0.625  cnt_0_IBUF (cnt_0_IBUF)
-     LUT4:I0->O            1   0.097   0.000  Mram_m241 (Mram_m24)
-     LD_1:D                   -0.028          r2_4
+     IBUF:I->O             1   0.001   0.279  m1_5_IBUF (m1_5_IBUF)
+     LD_1:D                   -0.028          r1_5
     ----------------------------------------
-    Total                      0.723ns (0.098ns logic, 0.625ns route)
-                                       (13.6% logic, 86.4% route)
+    Total                      0.280ns (0.001ns logic, 0.279ns route)
+                                       (0.4% logic, 99.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'reset'
   Total number of paths / destination ports: 41941776 / 20
 -------------------------------------------------------------------------
-Offset:              22.959ns (Levels of Logic = 37)
+Offset:              23.235ns (Levels of Logic = 38)
   Source:            r2_7 (LATCH)
   Destination:       out<19> (PAD)
   Source Clock:      reset rising
@@ -399,9 +361,10 @@ Offset:              22.959ns (Levels of Logic = 37)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD_1:G->Q             1   0.475   0.279  r2_7 (r2_7)
-     DSP48E1:A7->P1        2   2.823   0.383  Mmult_p (p<1>)
-     LUT2:I0->O            2   0.097   0.515  a1/f2/Mxor_s_xo<0>11 (a1/f2/Mxor_s_xo<0>1)
-     LUT4:I1->O            3   0.097   0.566  Mmux_out121 (out_1_OBUF)
+     DSP48E1:A7->P0        3   2.823   0.389  Mmult_p (p<0>)
+     LUT3:I1->O            4   0.097   0.309  Mmux_out11 (out_0_OBUF)
+     LUT2:I1->O            1   0.097   0.379  a1/f1/n00061 (a1/f1/n0006)
+     LUT3:I1->O            3   0.097   0.566  Mmux_out121 (out_1_OBUF)
      LUT5:I1->O            2   0.097   0.383  a1/f2/Madd_cout_lut<0>1 (a1/cout<1>)
      LUT3:I1->O            3   0.097   0.521  Mmux_out131 (out_2_OBUF)
      LUT4:I1->O            2   0.097   0.383  a1/f3/Madd_cout_lut<0>1 (a1/cout<2>)
@@ -437,14 +400,14 @@ Offset:              22.959ns (Levels of Logic = 37)
      LUT6:I4->O            2   0.097   0.283  Mmux_out111 (out_19_OBUF)
      OBUF:I->O                 0.000          out_19_OBUF (out<19>)
     ----------------------------------------
-    Total                     22.959ns (6.693ns logic, 16.266ns route)
+    Total                     23.235ns (6.790ns logic, 16.445ns route)
                                        (29.2% logic, 70.8% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 1048575 / 20
 -------------------------------------------------------------------------
-Delay:               19.476ns (Levels of Logic = 37)
+Delay:               19.868ns (Levels of Logic = 38)
   Source:            reset (PAD)
   Destination:       out<19> (PAD)
 
@@ -453,8 +416,9 @@ Delay:               19.476ns (Levels of Logic = 37)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            20   0.001   0.599  reset_IBUF (reset_IBUF)
-     LUT3:I0->O            4   0.097   0.393  Mmux_out11 (out_0_OBUF)
-     LUT4:I2->O            3   0.097   0.566  Mmux_out121 (out_1_OBUF)
+     LUT3:I0->O            4   0.097   0.309  Mmux_out11 (out_0_OBUF)
+     LUT2:I1->O            1   0.097   0.379  a1/f1/n00061 (a1/f1/n0006)
+     LUT3:I1->O            3   0.097   0.566  Mmux_out121 (out_1_OBUF)
      LUT5:I1->O            2   0.097   0.383  a1/f2/Madd_cout_lut<0>1 (a1/cout<1>)
      LUT3:I1->O            3   0.097   0.521  Mmux_out131 (out_2_OBUF)
      LUT4:I1->O            2   0.097   0.383  a1/f3/Madd_cout_lut<0>1 (a1/cout<2>)
@@ -490,8 +454,8 @@ Delay:               19.476ns (Levels of Logic = 37)
      LUT6:I4->O            2   0.097   0.283  Mmux_out111 (out_19_OBUF)
      OBUF:I->O                 0.000          out_19_OBUF (out<19>)
     ----------------------------------------
-    Total                     19.476ns (3.396ns logic, 16.080ns route)
-                                       (17.4% logic, 82.6% route)
+    Total                     19.868ns (3.493ns logic, 16.375ns route)
+                                       (17.6% logic, 82.4% route)
 
 =========================================================================
 
@@ -501,14 +465,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.67 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.68 secs
  
 --> 
 
-Total memory usage is 475252 kilobytes
+Total memory usage is 474036 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   21 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   18 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/xilinx/lab101/FA.v";
+static const char *ng0 = "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab101/FA.v";
 
 
 

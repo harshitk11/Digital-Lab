@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab103/comp.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab103/comp.syr" 
