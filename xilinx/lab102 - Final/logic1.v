@@ -18,15 +18,24 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module logic1(comp_out,cnt1,cnt2,cnt);
+module logic1(comp_out,cnt1,cnt2,cnt,reset);
+input reset;
 input [1:0] comp_out;
 output cnt1,cnt2,cnt;
 reg [3:0] cnt,cnt1,cnt2;
 
+reg [3:0] cnt3,cnt4;
 
-always @ (comp_out)
+
+
+always @ (comp_out or reset)
 begin
-	if ( comp_out == 2'b01 )
+	if ( reset == 1'b1 )
+	begin
+	cnt1 <=0;
+	cnt2 <=0;
+	end
+	else if ( comp_out == 2'b01 )
 	begin
 		cnt2 <= cnt2 + 4'b0001;
 	end
@@ -37,8 +46,9 @@ begin
 	end
 	else if ( comp_out == 2'b00 )
 	begin
-		cnt <= cnt1;
-		cnt1 <= cnt1 + 4'b0001;	
+		cnt = cnt1;
+		cnt1 <= cnt1 + 4'b0001;
+		cnt2 <= cnt2 + 4'b0001;		
 	end
 		
 

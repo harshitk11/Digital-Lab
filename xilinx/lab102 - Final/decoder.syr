@@ -105,7 +105,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\xilinx\lab102\decoder.v" into library work
+Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\decoder.v" into library work
 Parsing module <decoder>.
 
 =========================================================================
@@ -119,23 +119,23 @@ Elaborating module <decoder>.
 =========================================================================
 
 Synthesizing Unit <decoder>.
-    Related source file is "D:\xilinx\lab102\decoder.v".
-    Found 1-bit tristate buffer for signal <sel<15>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<14>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<13>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<12>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<11>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<10>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<9>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<8>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<7>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<6>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<5>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<4>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<3>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<2>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<1>> created at line 26
-    Found 1-bit tristate buffer for signal <sel<0>> created at line 26
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\decoder.v".
+    Found 1-bit tristate buffer for signal <sel<15>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<14>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<13>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<12>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<11>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<10>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<9>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<8>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<7>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<6>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<5>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<4>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<3>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<2>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<1>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<0>> created at line 28
     Summary:
 	inferred  16 Tristate(s).
 Unit <decoder> synthesized.
@@ -291,12 +291,12 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.07 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.35 secs
  
 --> 
 
-Total memory usage is 473460 kilobytes
+Total memory usage is 473012 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

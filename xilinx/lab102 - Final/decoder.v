@@ -23,6 +23,8 @@ input [3:0] addr;                  //address of the 8 bit register you want to s
 output [15:0] sel;
 reg [15:0] sel;
 input enable;
+wire [3:0] flag;
+
 always @(addr or enable)
 	begin
 	if(enable == 1'b1)

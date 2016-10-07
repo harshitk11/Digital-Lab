@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: index_mem.prj
 
@@ -115,20 +115,314 @@ Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102
 Parsing module <buff>.
 Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\ram.v" into library work
 Parsing module <ram>.
-Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" into library work
-Parsing module <logic1>.
-Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\comp.v" into library work
-Parsing module <comp>.
 Analyzing Verilog file "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\index_mem.v" into library work
 Parsing module <index_mem>.
-ERROR:HDLCompiler:661 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\index_mem.v" Line 24: Non-net port cnt1 cannot be of mode input
-ERROR:HDLCompiler:598 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\index_mem.v" Line 21: Module <index_mem> ignored due to previous errors.
-Verilog file C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\index_mem.v ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <index_mem>.
+
+Elaborating module <ram>.
+
+Elaborating module <decoder>.
+
+Elaborating module <mem8bit>.
+
+Elaborating module <Dflipflop>.
+
+Elaborating module <buff>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <index_mem>.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\index_mem.v".
+    Summary:
+	no macro.
+Unit <index_mem> synthesized.
+
+Synthesizing Unit <ram>.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\ram.v".
+    Summary:
+	no macro.
+Unit <ram> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\decoder.v".
+    Found 1-bit tristate buffer for signal <sel<15>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<14>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<13>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<12>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<11>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<10>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<9>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<8>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<7>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<6>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<5>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<4>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<3>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<2>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<1>> created at line 28
+    Found 1-bit tristate buffer for signal <sel<0>> created at line 28
+    Summary:
+	inferred  16 Tristate(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <mem8bit>.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\mem8bit.v".
+    Summary:
+	no macro.
+Unit <mem8bit> synthesized.
+
+Synthesizing Unit <Dflipflop>.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\Dflipflop.v".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Dflipflop> synthesized.
+
+Synthesizing Unit <buff>.
+    Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\buf.v".
+    Found 1-bit tristate buffer for signal <out<7>> created at line 29
+    Found 1-bit tristate buffer for signal <out<6>> created at line 29
+    Found 1-bit tristate buffer for signal <out<5>> created at line 29
+    Found 1-bit tristate buffer for signal <out<4>> created at line 29
+    Found 1-bit tristate buffer for signal <out<3>> created at line 29
+    Found 1-bit tristate buffer for signal <out<2>> created at line 29
+    Found 1-bit tristate buffer for signal <out<1>> created at line 29
+    Found 1-bit tristate buffer for signal <out<0>> created at line 29
+    Summary:
+	inferred   8 Tristate(s).
+Unit <buff> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 512
+ 1-bit register                                        : 512
+# Tristates                                            : 576
+ 1-bit tristate buffer                                 : 576
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 512
+ Flip-Flops                                            : 512
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2040 - Unit index_mem: 32 multi-source signals are replaced by logic (pull-up yes): out1<0>_MLTSRCEDGE, out1<1>_MLTSRCEDGE, out1<2>_MLTSRCEDGE, out1<3>_MLTSRCEDGE, out1<4>_MLTSRCEDGE, out1<5>_MLTSRCEDGE, out1<6>_MLTSRCEDGE, out1<7>_MLTSRCEDGE, out2<0>_MLTSRCEDGE, out2<1>_MLTSRCEDGE, out2<2>_MLTSRCEDGE, out2<3>_MLTSRCEDGE, out2<4>_MLTSRCEDGE, out2<5>_MLTSRCEDGE, out2<6>_MLTSRCEDGE, out2<7>_MLTSRCEDGE, r1<0>_MLTSRCEDGE, r1<1>_MLTSRCEDGE, r1<2>_MLTSRCEDGE, r1<3>_MLTSRCEDGE, r1<4>_MLTSRCEDGE, r1<5>_MLTSRCEDGE, r1<6>_MLTSRCEDGE, r1<7>_MLTSRCEDGE, r2<0>_MLTSRCEDGE, r2<1>_MLTSRCEDGE, r2<2>_MLTSRCEDGE, r2<3>_MLTSRCEDGE, r2<4>_MLTSRCEDGE, r2<5>_MLTSRCEDGE, r2<6>_MLTSRCEDGE, r2<7>_MLTSRCEDGE.
+
+Optimizing unit <index_mem> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block index_mem, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 512
+ Flip-Flops                                            : 512
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : index_mem.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 256
+#      LUT3                        : 31
+#      LUT5                        : 64
+#      LUT6                        : 160
+#      MUXF7                       : 1
+# FlipFlops/Latches                : 512
+#      FDRE                        : 512
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 82
+#      IBUF                        : 50
+#      OBUFT                       : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             512  out of  126800     0%  
+ Number of Slice LUTs:                  255  out of  63400     0%  
+    Number used as Logic:               255  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    577
+   Number with an unused Flip Flop:      65  out of    577    11%  
+   Number with an unused LUT:           322  out of    577    55%  
+   Number of fully used LUT-FF pairs:   190  out of    577    32%  
+   Number of unique control sets:        64
+
+IO Utilization: 
+ Number of IOs:                          83
+ Number of bonded IOBs:                  83  out of    210    39%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 512   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 1.297ns
+   Maximum output required time after clock: 2.162ns
+   Maximum combinational path delay: 2.048ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 3584 / 1536
+-------------------------------------------------------------------------
+Offset:              1.297ns (Levels of Logic = 2)
+  Source:            addr2w<2> (PAD)
+  Destination:       data2/m11/d0/Q (FF)
+  Destination Clock: clk rising
+
+  Data Path: addr2w<2> to data2/m11/d0/Q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            48   0.001   0.793  addr2w_2_IBUF (addr2w_2_IBUF)
+     LUT5:I0->O            8   0.097   0.311  data2/wr_en_sel[11]_AND_12_o11 (data2/wr_en_sel[11]_AND_12_o)
+     FDRE:CE                   0.095          data2/m11/d7/Q
+    ----------------------------------------
+    Total                      1.297ns (0.193ns logic, 1.104ns route)
+                                       (14.9% logic, 85.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 512 / 32
+-------------------------------------------------------------------------
+Offset:              2.162ns (Levels of Logic = 4)
+  Source:            i_mem1/m5/d7/Q (FF)
+  Destination:       r1<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: i_mem1/m5/d7/Q to r1<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.361   0.556  i_mem1/m5/d7/Q (i_mem1/m5/d7/Q)
+     LUT6:I2->O            1   0.097   0.379  r1<7>_MLTSRCEDGELogicTrst4 (r1<7>_MLTSRCEDGELogicTrst3)
+     LUT3:I1->O            1   0.097   0.295  r1<7>_MLTSRCEDGELogicTrst5 (r1<7>_MLTSRCEDGELogicTrst4)
+     LUT6:I5->O            1   0.097   0.279  r1<7>_MLTSRCEDGELogicTrst6 (r1<7>_MLTSRCEDGE)
+     OBUFT:I->O                0.000          r1_7_OBUFT (r1<7>)
+    ----------------------------------------
+    Total                      2.162ns (0.652ns logic, 1.510ns route)
+                                       (30.2% logic, 69.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 416 / 32
+-------------------------------------------------------------------------
+Delay:               2.048ns (Levels of Logic = 5)
+  Source:            cnt1w<2> (PAD)
+  Destination:       r1<7> (PAD)
+
+  Data Path: cnt1w<2> to r1<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            48   0.001   0.803  cnt1w_2_IBUF (cnt1w_2_IBUF)
+     LUT6:I0->O            1   0.097   0.379  r1<0>_MLTSRCEDGELogicTrst4 (r1<0>_MLTSRCEDGELogicTrst3)
+     LUT3:I1->O            1   0.097   0.295  r1<0>_MLTSRCEDGELogicTrst5 (r1<0>_MLTSRCEDGELogicTrst4)
+     LUT6:I5->O            1   0.097   0.279  r1<0>_MLTSRCEDGELogicTrst6 (r1<0>_MLTSRCEDGE)
+     OBUFT:I->O                0.000          r1_0_OBUFT (r1<0>)
+    ----------------------------------------
+    Total                      2.048ns (0.292ns logic, 1.756ns route)
+                                       (14.3% logic, 85.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.87 secs
+ 
 --> 
 
-Total memory usage is 270884 kilobytes
+Total memory usage is 486388 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

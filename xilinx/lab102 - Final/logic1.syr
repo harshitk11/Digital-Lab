@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: logic1.prj
 
@@ -113,10 +113,11 @@ Parsing module <logic1>.
 =========================================================================
 
 Elaborating module <logic1>.
-WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 31: Signal <cnt2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 36: Signal <cnt1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 40: Signal <cnt1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 41: Signal <cnt1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 40: Signal <cnt2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 45: Signal <cnt1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 49: Signal <cnt1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 50: Signal <cnt1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v" Line 51: Signal <cnt2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -124,20 +125,20 @@ WARNING:HDLCompiler:91 - "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab1
 
 Synthesizing Unit <logic1>.
     Related source file is "C:\Users\user\Documents\GitHub\Digital-Lab\xilinx\lab102 - Final\logic1.v".
-    Found 4-bit adder for signal <cnt2[3]_GND_1_o_add_1_OUT> created at line 31.
-    Found 4-bit adder for signal <cnt1[3]_GND_1_o_add_5_OUT> created at line 41.
-WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <cnt1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit adder for signal <cnt1[3]_GND_1_o_add_6_OUT> created at line 50.
+    Found 4-bit adder for signal <cnt2[3]_GND_1_o_add_7_OUT> created at line 51.
 WARNING:Xst:737 - Found 1-bit latch for signal <cnt1<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cnt1<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cnt1<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cnt<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cnt<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cnt<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <cnt<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <cnt2<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cnt1<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  12 Latch(s).
@@ -205,14 +206,17 @@ Top Level Output File Name         : logic1.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 11
-#      INV                         : 2
+# BELS                             : 12
+#      INV                         : 4
 #      LUT2                        : 3
-#      LUT3                        : 4
+#      LUT3                        : 3
 #      LUT4                        : 2
 # FlipFlops/Latches                : 12
-#      LD                          : 8
-#      LDE_1                       : 4
+#      LD                          : 4
+#      LDC                         : 4
+#      LDCE_1                      : 4
+# Clock Buffers                    : 1
+#      BUFG                        : 1
 # IO Buffers                       : 15
 #      IBUF                        : 3
 #      OBUF                        : 12
@@ -225,14 +229,14 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:               8  out of  126800     0%  
- Number of Slice LUTs:                   11  out of  63400     0%  
-    Number used as Logic:                11  out of  63400     0%  
+ Number of Slice LUTs:                   12  out of  63400     0%  
+    Number used as Logic:                12  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     11
-   Number with an unused Flip Flop:       3  out of     11    27%  
-   Number with an unused LUT:             0  out of     11     0%  
-   Number of fully used LUT-FF pairs:     8  out of     11    72%  
+ Number of LUT Flip Flop pairs used:     12
+   Number with an unused Flip Flop:       4  out of     12    33%  
+   Number with an unused LUT:             0  out of     12     0%  
+   Number of fully used LUT-FF pairs:     8  out of     12    66%  
    Number of unique control sets:         3
 
 IO Utilization: 
@@ -241,6 +245,7 @@ IO Utilization:
     IOB Flip Flops/Latches:               4
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -260,12 +265,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------+------------------------+-------+
-Clock Signal                                                       | Clock buffer(FF name)  | Load  |
--------------------------------------------------------------------+------------------------+-------+
-comp_out[2]_GND_1_o_equal_1_o(comp_out[2]_GND_1_o_equal_1_o<2>1:O) | NONE(*)(cnt2_1)        | 8     |
-comp_out[2]_comp_out[2]_AND_6_o(comp_out[2]_comp_out[2]_AND_6_o1:O)| NONE(*)(cnt_2)         | 4     |
--------------------------------------------------------------------+------------------------+-------+
+------------------------------------------------------------------+------------------------+-------+
+Clock Signal                                                      | Clock buffer(FF name)  | Load  |
+------------------------------------------------------------------+------------------------+-------+
+comp_out[1]_GND_1_o_equal_2_o(comp_out[1]_GND_1_o_equal_2_o<1>1:O)| NONE(*)(cnt1_1)        | 4     |
+comp_out<1>                                                       | IBUF+BUFG              | 4     |
+reset_comp_out[1]_AND_11_o(reset_comp_out[1]_AND_11_o1:O)         | NONE(*)(cnt_1)         | 4     |
+------------------------------------------------------------------+------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -280,7 +286,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 1.170ns (Maximum Frequency: 854.920MHz)
-   Minimum input arrival time before clock: 0.875ns
+   Minimum input arrival time before clock: 0.791ns
    Maximum output required time after clock: 0.777ns
    Maximum combinational path delay: No path found
 
@@ -289,74 +295,134 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'comp_out[2]_GND_1_o_equal_1_o'
+Timing constraint: Default period analysis for Clock 'comp_out[1]_GND_1_o_equal_2_o'
   Clock period: 1.170ns (frequency: 854.920MHz)
-  Total number of paths / destination ports: 20 / 8
+  Total number of paths / destination ports: 10 / 4
 -------------------------------------------------------------------------
 Delay:               1.170ns (Levels of Logic = 1)
   Source:            cnt1_0 (LATCH)
   Destination:       cnt1_0 (LATCH)
-  Source Clock:      comp_out[2]_GND_1_o_equal_1_o rising
-  Destination Clock: comp_out[2]_GND_1_o_equal_1_o rising
+  Source Clock:      comp_out[1]_GND_1_o_equal_2_o rising
+  Destination Clock: comp_out[1]_GND_1_o_equal_2_o rising
 
   Data Path: cnt1_0 to cnt1_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE_1:G->Q            6   0.475   0.302  cnt1_0 (cnt1_0)
-     INV:I->O              1   0.113   0.279  Madd_cnt1[3]_GND_1_o_add_5_OUT_xor<0>11_INV_0 (cnt1[3]_GND_1_o_add_5_OUT<0>)
-     LDE_1:D                  -0.028          cnt1_0
+     LDCE_1:G->Q           6   0.475   0.302  cnt1_0 (cnt1_0)
+     INV:I->O              1   0.113   0.279  Madd_cnt1[3]_GND_1_o_add_6_OUT_xor<0>11_INV_0 (cnt1[3]_GND_1_o_add_6_OUT<0>)
+     LDCE_1:D                 -0.028          cnt1_0
     ----------------------------------------
     Total                      1.170ns (0.588ns logic, 0.582ns route)
                                        (50.3% logic, 49.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'comp_out[2]_GND_1_o_equal_1_o'
-  Total number of paths / destination ports: 8 / 4
+Timing constraint: Default period analysis for Clock 'comp_out<1>'
+  Clock period: 1.162ns (frequency: 860.215MHz)
+  Total number of paths / destination ports: 10 / 4
 -------------------------------------------------------------------------
-Offset:              0.875ns (Levels of Logic = 2)
-  Source:            comp_out<2> (PAD)
-  Destination:       cnt1_0 (LATCH)
-  Destination Clock: comp_out[2]_GND_1_o_equal_1_o rising
+Delay:               1.162ns (Levels of Logic = 1)
+  Source:            cnt2_0 (LATCH)
+  Destination:       cnt2_0 (LATCH)
+  Source Clock:      comp_out<1> rising
+  Destination Clock: comp_out<1> rising
 
-  Data Path: comp_out<2> to cnt1_0
+  Data Path: cnt2_0 to cnt2_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.001   0.389  comp_out_2_IBUF (comp_out_2_IBUF)
-     LUT2:I0->O            4   0.097   0.293  comp_out[2]_comp_out[2]_OR_3_o1 (comp_out[2]_comp_out[2]_OR_3_o)
-     LDE_1:GE                  0.095          cnt1_0
+     LDC:G->Q              5   0.472   0.298  cnt2_0 (cnt2_0)
+     INV:I->O              1   0.113   0.279  Madd_cnt2[3]_GND_1_o_add_7_OUT_xor<0>11_INV_0 (cnt2[3]_GND_1_o_add_7_OUT<0>)
+     LDC:D                    -0.028          cnt2_0
     ----------------------------------------
-    Total                      0.875ns (0.193ns logic, 0.682ns route)
-                                       (22.0% logic, 78.0% route)
+    Total                      1.162ns (0.585ns logic, 0.577ns route)
+                                       (50.3% logic, 49.7% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'comp_out[2]_GND_1_o_equal_1_o'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'comp_out[1]_GND_1_o_equal_2_o'
   Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.791ns (Levels of Logic = 2)
+  Source:            comp_out<0> (PAD)
+  Destination:       cnt1_1 (LATCH)
+  Destination Clock: comp_out[1]_GND_1_o_equal_2_o rising
+
+  Data Path: comp_out<0> to cnt1_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.289  comp_out_0_IBUF (comp_out_0_IBUF)
+     INV:I->O              4   0.113   0.293  comp_out[1]_comp_out[1]_OR_2_o1_INV_0 (comp_out[1]_comp_out[1]_OR_2_o)
+     LDCE_1:GE                 0.095          cnt1_1
+    ----------------------------------------
+    Total                      0.791ns (0.209ns logic, 0.582ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'comp_out<1>'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.666ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       cnt2_0 (LATCH)
+  Destination Clock: comp_out<1> rising
+
+  Data Path: reset to cnt2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   0.001   0.316  reset_IBUF (reset_IBUF)
+     LDC:CLR                   0.349          cnt2_0
+    ----------------------------------------
+    Total                      0.666ns (0.350ns logic, 0.316ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'comp_out[1]_GND_1_o_equal_2_o'
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              0.777ns (Levels of Logic = 1)
   Source:            cnt1_0 (LATCH)
   Destination:       cnt1<0> (PAD)
-  Source Clock:      comp_out[2]_GND_1_o_equal_1_o rising
+  Source Clock:      comp_out[1]_GND_1_o_equal_2_o rising
 
   Data Path: cnt1_0 to cnt1<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LDE_1:G->Q            6   0.475   0.302  cnt1_0 (cnt1_0)
+     LDCE_1:G->Q           6   0.475   0.302  cnt1_0 (cnt1_0)
      OBUF:I->O                 0.000          cnt1_0_OBUF (cnt1<0>)
     ----------------------------------------
     Total                      0.777ns (0.475ns logic, 0.302ns route)
                                        (61.1% logic, 38.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'comp_out[2]_comp_out[2]_AND_6_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'comp_out<1>'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              0.770ns (Levels of Logic = 1)
+  Source:            cnt2_0 (LATCH)
+  Destination:       cnt2<0> (PAD)
+  Source Clock:      comp_out<1> rising
+
+  Data Path: cnt2_0 to cnt2<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              5   0.472   0.298  cnt2_0 (cnt2_0)
+     OBUF:I->O                 0.000          cnt2_0_OBUF (cnt2<0>)
+    ----------------------------------------
+    Total                      0.770ns (0.472ns logic, 0.298ns route)
+                                       (61.3% logic, 38.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'reset_comp_out[1]_AND_11_o'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              0.751ns (Levels of Logic = 1)
   Source:            cnt_3 (LATCH)
   Destination:       cnt<3> (PAD)
-  Source Clock:      comp_out[2]_comp_out[2]_AND_6_o falling
+  Source Clock:      reset_comp_out[1]_AND_11_o falling
 
   Data Path: cnt_3 to cnt<3>
                                 Gate     Net
@@ -373,33 +439,41 @@ Offset:              0.751ns (Levels of Logic = 1)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock comp_out[2]_GND_1_o_equal_1_o
+Clock to Setup on destination clock comp_out<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+comp_out<1>    |    1.162|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock comp_out[1]_GND_1_o_equal_2_o
 -----------------------------+---------+---------+---------+---------+
                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------+---------+---------+---------+---------+
-comp_out[2]_GND_1_o_equal_1_o|    1.170|         |    1.162|         |
+comp_out[1]_GND_1_o_equal_2_o|    1.170|         |         |         |
 -----------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock comp_out[2]_comp_out[2]_AND_6_o
+Clock to Setup on destination clock reset_comp_out[1]_AND_11_o
 -----------------------------+---------+---------+---------+---------+
                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------------+---------+---------+---------+---------+
-comp_out[2]_GND_1_o_equal_1_o|         |         |    0.777|         |
+comp_out[1]_GND_1_o_equal_2_o|         |         |    0.777|         |
 -----------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.06 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.14 secs
  
 --> 
 
-Total memory usage is 472308 kilobytes
+Total memory usage is 483444 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

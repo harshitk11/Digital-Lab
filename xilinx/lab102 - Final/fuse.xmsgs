@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="568" delta="unknown" >"C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Copy/ram_tb.v" Line 66: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">4</arg>&gt; bits.
-</msg>
-
 </messages>
 

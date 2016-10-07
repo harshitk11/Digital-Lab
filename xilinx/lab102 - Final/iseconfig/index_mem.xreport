@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-10-06T22:36:30</DateModified>
+  <DateModified>2016-10-07T15:58:20</DateModified>
   <ModuleName>index_mem</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-10-07T15:54:39</SummaryTimeStamp>
   <SavedFilePath>C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/iseconfig/index_mem.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final\</ImplementationReportsDirectory>
-  <DateInitialized>2016-10-06T22:23:08</DateInitialized>
+  <DateInitialized>2016-10-07T15:54:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

@@ -3,3 +3,7 @@ xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/dec
 xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 
 xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 
 xst -intstyle ise -ifn "D:/xilinx/lab102/decoder.xst" -ofn "D:/xilinx/lab102/decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.syr" 
+xst -intstyle ise -ifn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.xst" -ofn "C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/decoder.syr" 

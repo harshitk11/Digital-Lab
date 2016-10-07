@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-10-06T22:22:56</DateModified>
+  <DateModified>2016-10-07T03:37:11</DateModified>
   <ModuleName>ram1</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102/iseconfig/ram1.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102\</ImplementationReportsDirectory>
   <DateInitialized>2016-10-06T22:22:56</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
