@@ -35,22 +35,22 @@ output [7:0] r1,r2;
 wire [3:0] cnt,cnt1,cnt2,cnt1w,cnt2w;
 reg [3:0] addr1,addr2;
 
-//ram data1(din1,out1,((addr1w * wr_en) + (addr1 * ~wr_en)),wr_en,clk,reset);
-//ram data2(din2,out2,((addr2w * wr_en) + (addr2 * ~wr_en)),wr_en,clk,reset);
-//ram i_mem1(i1,r1,((cnt1w * wr_en) + (cnt1 * ~wr_en)),wr_en,clk,reset);
-//ram i_mem2(i2,r2,((cnt2w * wr_en) + (cnt2 * ~wr_en)),wr_en,clk,reset);
-//comp c1(r1,r2,comp_logic);
-//logic1 l1(comp_logic,cnt1,cnt2,cnt,reset);
+ram data1(din1,out1,((addr1w * wr_en) + (addr1 * ~wr_en)),wr_en,clk,reset);
+ram data2(din2,out2,((addr2w * wr_en) + (addr2 * ~wr_en)),wr_en,clk,reset);
+ram i_mem1(i1,r1,((cnt1w * wr_en) + (cnt1 * ~wr_en)),wr_en,clk,reset);
+ram i_mem2(i2,r2,((cnt2w * wr_en) + (cnt2 * ~wr_en)),wr_en,clk,reset);
+comp c1(r1,r2,comp_logic);
+logic1 l1(comp_logic,cnt1,cnt2,cnt,reset);
 
-//always @ (cnt)
-//begin
-//addr1 <= r1;
-//addr2 <= r1;
+always @ (cnt)
+begin
+addr1 <= r1;
+addr2 <= r1;
 //end
-ram data1(din1,out1,addr1w,wr_en,clk,reset);
-ram data2(din2,out2,addr2w,wr_en,clk,reset);
-ram i_mem1(i1,r1,cnt1w,wr_en,clk,reset);
-ram i_mem2(i2,r2,cnt2w,wr_en,clk,reset);
+//ram data1(din1,out1,addr1w,wr_en,clk,reset);
+//ram data2(din2,out2,addr2w,wr_en,clk,reset);
+//ram i_mem1(i1,r1,cnt1w,wr_en,clk,reset);
+//ram i_mem2(i2,r2,cnt2w,wr_en,clk,reset);
 
 
 endmodule

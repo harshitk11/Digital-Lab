@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   14:49:24 09/30/2016
+// Create Date:   16:32:13 10/07/2016
 // Design Name:   ram
-// Module Name:   C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Copy/ram_tb.v
+// Module Name:   C:/Users/user/Documents/GitHub/Digital-Lab/xilinx/lab102 - Final/ram_tb.v
 // Project Name:  lab102
 // Target Device:  
 // Tool versions:  
@@ -30,6 +30,8 @@ module ram_tb;
 	reg wr_en;
 	reg clk;
 	reg rst;
+	reg [7:0] mem1 [0:15];
+	integer i;
 
 	// Outputs
 	wire [7:0] out;
@@ -51,30 +53,31 @@ module ram_tb;
 		wr_en = 0;
 		clk = 0;
 		rst = 0;
-
+		$readmemb("mem1.txt",mem1);
 		// Wait 100 ns for global reset to finish
 		#100;
         
 		// Add stimulus here
-		din = 8'b10010011;
-		addr = 4'b0011;
 		wr_en = 1;
-		rst = 0;
 		
-		#110;
+		for(i = 0; i < 16; i = i+1)
+		begin
+		din = mem1[i];
+		#25;
+		addr = addr + 4'b0001;
+		end
+		#10;
 		wr_en = 0;
-		addr = 4'b10010;
-		#50;
-		wr_en = 1;
-		#110;
-		wr_en = 0;
-		addr = 4'b0011;
-		
-		
-		
+		addr = 0;
+		for(i = 0; i < 16; i = i+1)
+		begin
+	
+		#25;
+		addr = addr + 4'b0001;
+		end
 	end
 	
-	always begin
+	always begin 
 	clk = ~clk;
 	#25;
 	end

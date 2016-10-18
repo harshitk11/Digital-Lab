@@ -94,16 +94,17 @@ module index_mem_tb;
 		for(i = 0; i<16 ; i = i+1)
 		begin
 		
-		i1 = indexmem1[i];
+		//i1 = indexmem1[i];
 		
-		i2 = indexmem2[i];
+		//i2 = indexmem2[i];
 		din1 = mem1[i];
-		din2 = mem2[i];
-		cnt1w = cnt1w + 4'b0001;
-		cnt2w = cnt2w + 4'b0001;
+		#25;
+		//din2 = mem2[i];
+		//cnt1w = cnt1w + 4'b0001;
+		//cnt2w = cnt2w + 4'b0001;
 		addr1w = addr1w + 4'b0001;
-		addr2w = addr2w + 4'b0001;
-		#24;
+		//addr2w = addr2w + 4'b0001;
+		
 		end
 		
 		wr_en = 0;
@@ -111,14 +112,15 @@ module index_mem_tb;
 		reset = 1;
 		#10;
 		reset = 0;
-		cnt1w = 0;
-		cnt2w = 0;
-		
+		//cnt1w = 0;
+		//cnt2w = 0;
+		addr1w = 0;
 		for(j = 0; j<16 ; j = j+1)
 		begin
-		cnt1w = cnt1w + 4'b0001;
-		cnt2w = cnt2w + 4'b0001;
-		#25;
+		addr1w = addr1w + 4'b0001;
+		//cnt1w = cnt1w + 4'b0001;
+		//cnt2w = cnt2w + 4'b0001;
+		#24;
 		end
 			
 	end
